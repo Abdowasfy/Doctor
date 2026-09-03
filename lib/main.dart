@@ -1,5 +1,6 @@
 
 import 'package:doctor/core/routing/router_generation.dart';
+import 'package:doctor/core/theming/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,12 +15,14 @@ class DoctorApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(390, 844),
+      designSize: const Size(375, 812),
       builder: (context, child) {
         return MaterialApp.router(
           debugShowCheckedModeBanner: false,
-          title: 'Doctor-App',
-          //theme: AppTheme.lightTheme,
+          title: 'Doctor App',
+          theme: ThemeData(primaryColor: AppColors.primaryColor,
+          scaffoldBackgroundColor: Colors.white,
+          ),
           routerConfig: RouterGeneration.goRouter,
         );
       },
