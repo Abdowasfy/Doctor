@@ -16,7 +16,7 @@ class DocLogoAndName extends StatelessWidget {
         Gap(8.w),
         Text(
           "Docdoc",
-          style: TextStyles.font24Black700eight,
+          style: TextStyles.font24BlueBold,
         ),
       ],
     );
